@@ -48,7 +48,6 @@ def test_mytest():
 @pytest.mark.parametrize('test_input,expected', [
     ('1+3', 4),
     ('2*4', 8),
-    ('2*4', 7),
     ('1 == 2', False),
 ])  # parametrize可以用装饰器的方式集成多组测试样例
 def test_eval(test_input, expected):
