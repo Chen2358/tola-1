@@ -8,7 +8,7 @@ pipeline {
 		}
 	    }
             steps {
-                sh 'python setup.py test'
+                sh 'pytest tests/'
             }
         }
     }
