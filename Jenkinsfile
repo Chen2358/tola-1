@@ -7,6 +7,9 @@ pipeline {
 			image 'python:2-alpine'
 		}
 	    }
+	    steps {
+                sh 'python install pytest'
+            }
             steps {
                 sh 'pytest tests'
             }
