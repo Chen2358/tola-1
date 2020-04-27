@@ -1,7 +1,7 @@
 pipeline {
     agent none
     stages {
-        stage('Build') {
+        stage('Test') {
 	    agent{
 		docker{
 			image 'python:2-alpine'
@@ -10,6 +10,11 @@ pipeline {
             steps {
                 sh 'python setup.py test'
             }
+	    post {
+		always {
+			junit 'test-reports/results.xml'		
+		}
+	    }
         }
     }
 }
