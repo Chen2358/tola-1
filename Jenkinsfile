@@ -8,7 +8,7 @@ pipeline {
 		}
 	    }
             steps {
-                sh 'pytest tests/'
+                sh 'pytest tests'
             }
         }
     }
