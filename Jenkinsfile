@@ -10,11 +10,6 @@ pipeline {
             steps {
                 sh 'python setup.py test'
             }
-	    post {
-		always {
-			junit 'test-reports/results.xml'		
-		}
-	    }
         }
     }
 }
