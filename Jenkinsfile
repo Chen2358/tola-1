@@ -11,9 +11,5 @@ pipeline {
                 sh 'python setup.py test'
             }
         }
-    post {
-        always {
-            junit 'build/reports/**/*.xml'
-        }
     }
 }
